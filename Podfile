@@ -4,10 +4,10 @@
 target 'NativeAd' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
+
+  # Pods for NativeAd
   pod 'FBAudienceNetwork'
   pod 'Leanplum-iOS-SDK'
-  pod 'Leanplum-iOS-Location'
-  pod 'Leanplum-iOS-LocationAndBeacons'
   pod 'Leanplum-iOS-UIEditor'
 
 end

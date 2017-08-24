@@ -9,6 +9,7 @@
 #import "StartViewController.h"
 #import <Leanplum/Leanplum.h>
 
+
 @interface StartViewController ()
 
 @end
@@ -16,9 +17,8 @@
 @implementation StartViewController
 
 - (IBAction)nextView{
-    [self performSegueWithIdentifier:@"next" sender:self];
+        [self performSegueWithIdentifier:@"next" sender:self];
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];

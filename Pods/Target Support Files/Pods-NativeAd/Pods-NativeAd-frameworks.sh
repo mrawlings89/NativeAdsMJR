@@ -102,14 +102,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/Leanplum-iOS-Location/LeanplumLocation.framework"
-  install_framework "${PODS_ROOT}/Leanplum-iOS-LocationAndBeacons/LeanplumLocationAndBeacons.framework"
   install_framework "${PODS_ROOT}/Leanplum-iOS-SDK/Leanplum.framework"
   install_framework "${PODS_ROOT}/Leanplum-iOS-UIEditor/LeanplumUIEditor.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/Leanplum-iOS-Location/LeanplumLocation.framework"
-  install_framework "${PODS_ROOT}/Leanplum-iOS-LocationAndBeacons/LeanplumLocationAndBeacons.framework"
   install_framework "${PODS_ROOT}/Leanplum-iOS-SDK/Leanplum.framework"
   install_framework "${PODS_ROOT}/Leanplum-iOS-UIEditor/LeanplumUIEditor.framework"
 fi

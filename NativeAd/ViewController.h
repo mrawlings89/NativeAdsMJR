@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Leanplum/Leanplum.h>
-#import <LeanplumUIEditor/LeanplumUIEditor.h>
-#import "AppDelegate.m"
+#import "AppDelegate.h"
 
 
 @import FBAudienceNetwork;
-
-
 
 @interface ViewController : UIViewController  <FBNativeAdDelegate>
 
@@ -32,7 +28,6 @@
 @property (strong, nonatomic) IBOutlet UIView *adUIView;
 
 @end
-
 
 
 

@@ -22,14 +22,6 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-## Leanplum-iOS-Location
-
-See https://www.leanplum.com/tos
-
-## Leanplum-iOS-LocationAndBeacons
-
-See https://www.leanplum.com/tos
-
 ## Leanplum-iOS-SDK
 
 See https://www.leanplum.com/tos

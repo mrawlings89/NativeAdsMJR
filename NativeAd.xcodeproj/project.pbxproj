@@ -14,6 +14,7 @@
 		7D2299161DD10BFD0092A50C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2299141DD10BFD0092A50C /* Main.storyboard */; };
 		7D2299181DD10BFD0092A50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2299171DD10BFD0092A50C /* Assets.xcassets */; };
 		7D22991B1DD10BFD0092A50C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2299191DD10BFD0092A50C /* LaunchScreen.storyboard */; };
+		FAD2C79128F2BB1878BAF5D4 /* libPods-NativeAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D020E7228EB8E0556B91330E /* libPods-NativeAd.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		7D22991C1DD10BFD0092A50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AED7D28C5DB11B998EC3CA9 /* Pods-NativeAd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeAd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeAd/Pods-NativeAd.debug.xcconfig"; sourceTree = "<group>"; };
 		A32DCCA0C99562D7A709352F /* Pods-NativeAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeAd.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeAd/Pods-NativeAd.release.xcconfig"; sourceTree = "<group>"; };
+		D020E7228EB8E0556B91330E /* libPods-NativeAd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeAd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD2C79128F2BB1878BAF5D4 /* libPods-NativeAd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 		E66B36CA5501B9C32499FA4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D020E7228EB8E0556B91330E /* libPods-NativeAd.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,15 +219,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NativeAd/Pods-NativeAd-frameworks.sh",
-				"${PODS_ROOT}/Leanplum-iOS-Location/LeanplumLocation.framework",
-				"${PODS_ROOT}/Leanplum-iOS-LocationAndBeacons/LeanplumLocationAndBeacons.framework",
 				"${PODS_ROOT}/Leanplum-iOS-SDK/Leanplum.framework",
 				"${PODS_ROOT}/Leanplum-iOS-UIEditor/LeanplumUIEditor.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocationAndBeacons.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumUIEditor.framework",
 			);
@@ -373,6 +373,51 @@
 				);
 				INFOPLIST_FILE = NativeAd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"xml2\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"FBAudienceNetwork\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Leanplum\"",
+					"-framework",
+					"\"LeanplumUIEditor\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"CoreMotion\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"StoreKit\"",
+					"-weak_framework",
+					"\"WebKit\"",
+					"-v",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.BannerAd.defer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

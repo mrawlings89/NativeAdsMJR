@@ -7,12 +7,18 @@
 //
 
 #import "ViewController.h"
-#import <Leanplum/Leanplum.h> 
+#import <Leanplum/Leanplum.h>
 @import FBAudienceNetwork;
 
 @interface ViewController ()
 @property (strong, nonatomic) FBNativeAd *nativeAd;
 @end
+
+#define TOP_RIGHT_POSITION @"TopRight"
+#define BOTTOM_RIGHT_POSITION @"BottomRight"
+
+DEFINE_VAR_STRING(sponsoredLabel, @"Partner Content")
+DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
 
 @implementation ViewController
 
@@ -56,7 +62,7 @@
     self.adTitleLabel.text = self.nativeAd.title;
     self.adBodyLabel.text = self.nativeAd.body;
     self.adSocialContextLabel.text = self.nativeAd.socialContext;
-    self.sponsoredLabel.text = @"Sponsored";
+    self.sponsoredLabel.text = sponsoredLabel.stringValue;
     
     [self.adCallToActionButton setTitle:self.nativeAd.callToAction
                                forState:UIControlStateNormal];
@@ -67,9 +73,19 @@
                       withViewController:self];
     
     self.adChoicesView.nativeAd = nativeAd;
-    self.adChoicesView.corner = UIRectCornerTopRight;
+    //if stringvalue = right
+    [Leanplum onVariablesChanged:^() {
+    NSString *adPositioning = [adChoicesCorner stringValue];
+    if([adPositioning isEqualToString:TOP_RIGHT_POSITION])
+    {
+        self.adChoicesView.corner = UIRectCornerTopRight;
+    }
+    else if([adPositioning isEqualToString:BOTTOM_RIGHT_POSITION])
+    {
+        self.adChoicesView.corner = UIRectCornerBottomRight;
+    }
+    }];
 }
-
 - (void)nativeAd:(FBNativeAd *)nativeAd didFailWithError:(NSError *)error
 {
     NSLog(@"Native ad failed to load with error: %@", error);

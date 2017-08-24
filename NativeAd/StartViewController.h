@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <Leanplum/Leanplum.h>
-#import <LeanplumUIEditor/LeanplumUIEditor.h>
 
 @interface StartViewController : ViewController
 

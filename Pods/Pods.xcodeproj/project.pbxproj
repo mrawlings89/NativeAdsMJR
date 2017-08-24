@@ -12,43 +12,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014AEB5CA39082F4D41FF1F893447ECB /* FBAdChoicesView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdChoicesView.h; path = FBAudienceNetwork.framework/Headers/FBAdChoicesView.h; sourceTree = "<group>"; };
 		037C557CF4D1B5956DBFA289ADDAD844 /* Pods-NativeAd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NativeAd.debug.xcconfig"; sourceTree = "<group>"; };
-		09163DEA9B249BFA23F723CE241908D2 /* LeanplumLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeanplumLocation.framework; sourceTree = "<group>"; };
-		0A83E4F48F02ACC9E46BFE3079993B47 /* FBNativeAdScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdScrollView.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdScrollView.h; sourceTree = "<group>"; };
-		12520159D80DF261D1C2B89E826C6BBB /* Leanplum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Leanplum.framework; sourceTree = "<group>"; };
-		158D7FB56993B1193AAF161EAF483DC2 /* LeanplumLocationAndBeacons.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeanplumLocationAndBeacons.framework; sourceTree = "<group>"; };
 		1ACC1816B7952883D8D3020902D72468 /* Pods-NativeAd-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NativeAd-dummy.m"; sourceTree = "<group>"; };
 		201C3CB43120FF73DD9C07E0F9D683B9 /* libPods-NativeAd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NativeAd.a"; path = "libPods-NativeAd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2559558C1F8FAFA939D9A44E4305124C /* FBNativeAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdView.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdView.h; sourceTree = "<group>"; };
-		25C4C776766210B97CF6A1D386989863 /* FBNativeAdTableViewAdProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdTableViewAdProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdTableViewAdProvider.h; sourceTree = "<group>"; };
-		264F9D553E88C76E3BF22877F1D70FB3 /* FBNativeAdCollectionViewCellProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdCollectionViewCellProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdCollectionViewCellProvider.h; sourceTree = "<group>"; };
-		2F8C31033B0A72D788FF74A9F96EBC86 /* FBNativeAdsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdsManager.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdsManager.h; sourceTree = "<group>"; };
-		32E9889F3CF10CE115A649D04D84A622 /* FBNativeAdTableViewCellProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdTableViewCellProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdTableViewCellProvider.h; sourceTree = "<group>"; };
+		27EC37B8D464C9BC8FF3F0BCE275F3D2 /* FBNativeAdsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdsManager.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdsManager.h; sourceTree = "<group>"; };
+		28295EE512FEADC9EA1C7440B45A6110 /* Leanplum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Leanplum.h; path = Leanplum.framework/Headers/Leanplum.h; sourceTree = "<group>"; };
+		2B0396D5E3A02353AB3F92F5CFD24F01 /* FBAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdView.h; path = FBAudienceNetwork.framework/Headers/FBAdView.h; sourceTree = "<group>"; };
 		35DED66CF688E34962BCA3B102AF67BD /* Pods-NativeAd-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NativeAd-acknowledgements.plist"; sourceTree = "<group>"; };
-		3F783D866A4FDEF3C8A4FD14AFE64EC2 /* FBAdDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdDefines.h; path = FBAudienceNetwork.framework/Headers/FBAdDefines.h; sourceTree = "<group>"; };
-		5F236B91FC44C1C988EA24977BEA3CC5 /* Leanplum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Leanplum.h; path = Leanplum.framework/Headers/Leanplum.h; sourceTree = "<group>"; };
-		65EAA45B8FF3084F073C94E9CF501B17 /* FBMediaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBMediaView.h; path = FBAudienceNetwork.framework/Headers/FBMediaView.h; sourceTree = "<group>"; };
+		40C4D8655D2A39E8BA511422BB346E82 /* FBNativeAdCollectionViewCellProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdCollectionViewCellProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdCollectionViewCellProvider.h; sourceTree = "<group>"; };
+		48ADF3C897C72FF683BE4A1FA33DEC23 /* FBNativeAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdView.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdView.h; sourceTree = "<group>"; };
+		507C0E4C76A109B1C5AD5E4044B1696F /* FBMediaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBMediaView.h; path = FBAudienceNetwork.framework/Headers/FBMediaView.h; sourceTree = "<group>"; };
+		53459955D38FE6C247A17E61286B8B8B /* FBAdSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdSettings.h; path = FBAudienceNetwork.framework/Headers/FBAdSettings.h; sourceTree = "<group>"; };
+		5DE7EBC7CE6CB68C6AB640C3B7465F52 /* FBInterstitialAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBInterstitialAd.h; path = FBAudienceNetwork.framework/Headers/FBInterstitialAd.h; sourceTree = "<group>"; };
+		5F26084AABFE4D5EE335941F9D99D1F9 /* Leanplum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Leanplum.framework; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		690CEC285547C6074D2071CC9E658332 /* LPInbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPInbox.h; path = Leanplum.framework/Headers/LPInbox.h; sourceTree = "<group>"; };
-		704B80824B55C408338AD5979196EAE0 /* FBNativeAdCollectionViewAdProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdCollectionViewAdProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdCollectionViewAdProvider.h; sourceTree = "<group>"; };
-		7254B022F4C0F2EB50B9631A3395849F /* FBAdSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdSettings.h; path = FBAudienceNetwork.framework/Headers/FBAdSettings.h; sourceTree = "<group>"; };
+		6EFC2B3685B45EC61C5586BB353F7EAC /* FBAdDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdDefines.h; path = FBAudienceNetwork.framework/Headers/FBAdDefines.h; sourceTree = "<group>"; };
 		7A2E6E0CE213B0BEC9EE26B62C5BF008 /* Pods-NativeAd-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NativeAd-frameworks.sh"; sourceTree = "<group>"; };
 		7CE484E5DE42E809B5D6C2F4DD93BC00 /* Pods-NativeAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NativeAd.release.xcconfig"; sourceTree = "<group>"; };
-		7F75C20B1F3E59E8674D0CE0923C2735 /* FBNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAd.h; path = FBAudienceNetwork.framework/Headers/FBNativeAd.h; sourceTree = "<group>"; };
 		8A9A4C1F9ADF0005601AA3F8B6DB883C /* Pods-NativeAd-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NativeAd-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8E19D0C2EFCEE33A622184A8769C7127 /* FBNativeAdCollectionViewAdProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdCollectionViewAdProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdCollectionViewAdProvider.h; sourceTree = "<group>"; };
 		9322FBFD1DDB6358686FF1A2515AD317 /* Pods-NativeAd-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NativeAd-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A69FB16B6FD6675303D4A2C90CF8C65C /* LeanplumUIEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeanplumUIEditor.framework; sourceTree = "<group>"; };
-		AA8E48D616AAA338DB5D07916161BB1A /* LeanplumUIEditor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LeanplumUIEditor.h; path = LeanplumUIEditor.framework/Headers/LeanplumUIEditor.h; sourceTree = "<group>"; };
-		AD7E219ED9FF349ED21210F6284461B7 /* FBInstreamAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBInstreamAdView.h; path = FBAudienceNetwork.framework/Headers/FBInstreamAdView.h; sourceTree = "<group>"; };
-		BA41BD9459810E58CFE3EC037AA5B393 /* FBMediaViewVideoRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBMediaViewVideoRenderer.h; path = FBAudienceNetwork.framework/Headers/FBMediaViewVideoRenderer.h; sourceTree = "<group>"; };
-		BBCE27ADC7CE08D2AE0AF58D68797D89 /* FBInterstitialAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBInterstitialAd.h; path = FBAudienceNetwork.framework/Headers/FBInterstitialAd.h; sourceTree = "<group>"; };
-		C465E678CDA63A4D76721984B1885F98 /* FBAudienceNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAudienceNetwork.h; path = FBAudienceNetwork.framework/Headers/FBAudienceNetwork.h; sourceTree = "<group>"; };
-		C82710E93A14E85987473236E203D2EA /* FBAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdView.h; path = FBAudienceNetwork.framework/Headers/FBAdView.h; sourceTree = "<group>"; };
-		CA10CE53248001B08B67CDEE8F9E6EE3 /* FBAdSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdSize.h; path = FBAudienceNetwork.framework/Headers/FBAdSize.h; sourceTree = "<group>"; };
-		DF6E474B7971960835B7EE820EE21AD2 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
-		F45712EB5384AED7FFD42C9C35A257FF /* FBAdChoicesView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdChoicesView.h; path = FBAudienceNetwork.framework/Headers/FBAdChoicesView.h; sourceTree = "<group>"; };
-		FEB43AF75B17C6F466CB69FAC266F0A2 /* FBRewardedVideoAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBRewardedVideoAd.h; path = FBAudienceNetwork.framework/Headers/FBRewardedVideoAd.h; sourceTree = "<group>"; };
+		95AB5850DE4698AAD23BDD33A18E1F63 /* FBInstreamAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBInstreamAdView.h; path = FBAudienceNetwork.framework/Headers/FBInstreamAdView.h; sourceTree = "<group>"; };
+		A92A6B64C5BB4259AB2CF1A1BB1CD35A /* FBMediaViewVideoRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBMediaViewVideoRenderer.h; path = FBAudienceNetwork.framework/Headers/FBMediaViewVideoRenderer.h; sourceTree = "<group>"; };
+		AA1208DEB00D33EE4489A3AA6B97D596 /* FBNativeAdScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdScrollView.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdScrollView.h; sourceTree = "<group>"; };
+		AC9529998491E1C7883B58BBB41808D3 /* FBRewardedVideoAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBRewardedVideoAd.h; path = FBAudienceNetwork.framework/Headers/FBRewardedVideoAd.h; sourceTree = "<group>"; };
+		B5F5265BD00BEA9528D1897C39664706 /* LPInbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPInbox.h; path = Leanplum.framework/Headers/LPInbox.h; sourceTree = "<group>"; };
+		BE74D249CA237D9B1D612B4E0462E321 /* FBAudienceNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAudienceNetwork.h; path = FBAudienceNetwork.framework/Headers/FBAudienceNetwork.h; sourceTree = "<group>"; };
+		C671BDD12CBDC8045C7334551906C448 /* FBNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAd.h; path = FBAudienceNetwork.framework/Headers/FBNativeAd.h; sourceTree = "<group>"; };
+		CE224BD33A836FF5FBFF11AD047EE10D /* LeanplumUIEditor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LeanplumUIEditor.h; path = LeanplumUIEditor.framework/Headers/LeanplumUIEditor.h; sourceTree = "<group>"; };
+		D456F75979D376E436C296DEFE246C73 /* LeanplumUIEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeanplumUIEditor.framework; sourceTree = "<group>"; };
+		E4EC0137FD1EAB03FA8D5B7F51271FB5 /* FBAdSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBAdSize.h; path = FBAudienceNetwork.framework/Headers/FBAdSize.h; sourceTree = "<group>"; };
+		EC760883D75514C2E52062E47B94F026 /* FBNativeAdTableViewAdProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdTableViewAdProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdTableViewAdProvider.h; sourceTree = "<group>"; };
+		FCDA0F2F2CD80FAA9A0C26DD26A5E378 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		FE3455797D5DC5A35B3C01C60223208D /* FBNativeAdTableViewCellProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNativeAdTableViewCellProvider.h; path = FBAudienceNetwork.framework/Headers/FBNativeAdTableViewCellProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,38 +61,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		035F47BAC1C7A440BBDD4513F8028F53 /* Frameworks */ = {
+		292A5617A9C6A36F6E7A5A2DC2111D8B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				12520159D80DF261D1C2B89E826C6BBB /* Leanplum.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0BCD02688D75D7520932500858883F88 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D327DD5468820D880558F97C59921723 /* FBAudienceNetwork */,
-				F48CD85364E5BC9ED55EF477F0FFB6A5 /* Leanplum-iOS-Location */,
-				88227568AF13C9C1CD94DD24012CD968 /* Leanplum-iOS-LocationAndBeacons */,
-				6919DE74988B3EC7EEA38B8165B12ADF /* Leanplum-iOS-SDK */,
-				9C8093504516A587133CA6BF0B27159B /* Leanplum-iOS-UIEditor */,
+				963B78A9E8B3007272951DA2A1BA9859 /* FBAudienceNetwork */,
+				732F3A7CA0CEB190C4A0283A5940D019 /* Leanplum-iOS-SDK */,
+				A37A9D60E7CF79DFA7BCF035463A4908 /* Leanplum-iOS-UIEditor */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		2A25FD262DBC8F6E6C3439E2DDEDC602 /* Frameworks */ = {
+		3C1161787962597411B4C8C0E29BDB68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DF6E474B7971960835B7EE820EE21AD2 /* FBAudienceNetwork.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		56D2590C792F48CB2D787C343DE3A295 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A69FB16B6FD6675303D4A2C90CF8C65C /* LeanplumUIEditor.framework */,
+				D456F75979D376E436C296DEFE246C73 /* LeanplumUIEditor.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,15 +94,23 @@
 			path = "Target Support Files/Pods-NativeAd";
 			sourceTree = "<group>";
 		};
-		6919DE74988B3EC7EEA38B8165B12ADF /* Leanplum-iOS-SDK */ = {
+		732F3A7CA0CEB190C4A0283A5940D019 /* Leanplum-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				5F236B91FC44C1C988EA24977BEA3CC5 /* Leanplum.h */,
-				690CEC285547C6074D2071CC9E658332 /* LPInbox.h */,
-				035F47BAC1C7A440BBDD4513F8028F53 /* Frameworks */,
+				28295EE512FEADC9EA1C7440B45A6110 /* Leanplum.h */,
+				B5F5265BD00BEA9528D1897C39664706 /* LPInbox.h */,
+				78B9ABDEFF1703ACBC6CF223AA583852 /* Frameworks */,
 			);
 			name = "Leanplum-iOS-SDK";
 			path = "Leanplum-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		78B9ABDEFF1703ACBC6CF223AA583852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F26084AABFE4D5EE335941F9D99D1F9 /* Leanplum.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -130,34 +118,45 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				0BCD02688D75D7520932500858883F88 /* Pods */,
+				292A5617A9C6A36F6E7A5A2DC2111D8B /* Pods */,
 				E9B882E3BD3C2210BB089A7B1A529578 /* Products */,
 				C9AF84E9DAACFAB5AA6B49AF82694348 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		88227568AF13C9C1CD94DD24012CD968 /* Leanplum-iOS-LocationAndBeacons */ = {
+		963B78A9E8B3007272951DA2A1BA9859 /* FBAudienceNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				8E4FDD9915B24FE5CFE31F81BC3DDB1A /* Frameworks */,
+				014AEB5CA39082F4D41FF1F893447ECB /* FBAdChoicesView.h */,
+				6EFC2B3685B45EC61C5586BB353F7EAC /* FBAdDefines.h */,
+				53459955D38FE6C247A17E61286B8B8B /* FBAdSettings.h */,
+				E4EC0137FD1EAB03FA8D5B7F51271FB5 /* FBAdSize.h */,
+				2B0396D5E3A02353AB3F92F5CFD24F01 /* FBAdView.h */,
+				BE74D249CA237D9B1D612B4E0462E321 /* FBAudienceNetwork.h */,
+				95AB5850DE4698AAD23BDD33A18E1F63 /* FBInstreamAdView.h */,
+				5DE7EBC7CE6CB68C6AB640C3B7465F52 /* FBInterstitialAd.h */,
+				507C0E4C76A109B1C5AD5E4044B1696F /* FBMediaView.h */,
+				A92A6B64C5BB4259AB2CF1A1BB1CD35A /* FBMediaViewVideoRenderer.h */,
+				C671BDD12CBDC8045C7334551906C448 /* FBNativeAd.h */,
+				8E19D0C2EFCEE33A622184A8769C7127 /* FBNativeAdCollectionViewAdProvider.h */,
+				40C4D8655D2A39E8BA511422BB346E82 /* FBNativeAdCollectionViewCellProvider.h */,
+				AA1208DEB00D33EE4489A3AA6B97D596 /* FBNativeAdScrollView.h */,
+				27EC37B8D464C9BC8FF3F0BCE275F3D2 /* FBNativeAdsManager.h */,
+				EC760883D75514C2E52062E47B94F026 /* FBNativeAdTableViewAdProvider.h */,
+				FE3455797D5DC5A35B3C01C60223208D /* FBNativeAdTableViewCellProvider.h */,
+				48ADF3C897C72FF683BE4A1FA33DEC23 /* FBNativeAdView.h */,
+				AC9529998491E1C7883B58BBB41808D3 /* FBRewardedVideoAd.h */,
+				DF2FA2CA2135B5B2706FDA3646678A4D /* Frameworks */,
 			);
-			name = "Leanplum-iOS-LocationAndBeacons";
-			path = "Leanplum-iOS-LocationAndBeacons";
+			name = FBAudienceNetwork;
+			path = FBAudienceNetwork;
 			sourceTree = "<group>";
 		};
-		8E4FDD9915B24FE5CFE31F81BC3DDB1A /* Frameworks */ = {
+		A37A9D60E7CF79DFA7BCF035463A4908 /* Leanplum-iOS-UIEditor */ = {
 			isa = PBXGroup;
 			children = (
-				158D7FB56993B1193AAF161EAF483DC2 /* LeanplumLocationAndBeacons.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9C8093504516A587133CA6BF0B27159B /* Leanplum-iOS-UIEditor */ = {
-			isa = PBXGroup;
-			children = (
-				AA8E48D616AAA338DB5D07916161BB1A /* LeanplumUIEditor.h */,
-				56D2590C792F48CB2D787C343DE3A295 /* Frameworks */,
+				CE224BD33A836FF5FBFF11AD047EE10D /* LeanplumUIEditor.h */,
+				3C1161787962597411B4C8C0E29BDB68 /* Frameworks */,
 			);
 			name = "Leanplum-iOS-UIEditor";
 			path = "Leanplum-iOS-UIEditor";
@@ -179,34 +178,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D327DD5468820D880558F97C59921723 /* FBAudienceNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				F45712EB5384AED7FFD42C9C35A257FF /* FBAdChoicesView.h */,
-				3F783D866A4FDEF3C8A4FD14AFE64EC2 /* FBAdDefines.h */,
-				7254B022F4C0F2EB50B9631A3395849F /* FBAdSettings.h */,
-				CA10CE53248001B08B67CDEE8F9E6EE3 /* FBAdSize.h */,
-				C82710E93A14E85987473236E203D2EA /* FBAdView.h */,
-				C465E678CDA63A4D76721984B1885F98 /* FBAudienceNetwork.h */,
-				AD7E219ED9FF349ED21210F6284461B7 /* FBInstreamAdView.h */,
-				BBCE27ADC7CE08D2AE0AF58D68797D89 /* FBInterstitialAd.h */,
-				65EAA45B8FF3084F073C94E9CF501B17 /* FBMediaView.h */,
-				BA41BD9459810E58CFE3EC037AA5B393 /* FBMediaViewVideoRenderer.h */,
-				7F75C20B1F3E59E8674D0CE0923C2735 /* FBNativeAd.h */,
-				704B80824B55C408338AD5979196EAE0 /* FBNativeAdCollectionViewAdProvider.h */,
-				264F9D553E88C76E3BF22877F1D70FB3 /* FBNativeAdCollectionViewCellProvider.h */,
-				0A83E4F48F02ACC9E46BFE3079993B47 /* FBNativeAdScrollView.h */,
-				2F8C31033B0A72D788FF74A9F96EBC86 /* FBNativeAdsManager.h */,
-				25C4C776766210B97CF6A1D386989863 /* FBNativeAdTableViewAdProvider.h */,
-				32E9889F3CF10CE115A649D04D84A622 /* FBNativeAdTableViewCellProvider.h */,
-				2559558C1F8FAFA939D9A44E4305124C /* FBNativeAdView.h */,
-				FEB43AF75B17C6F466CB69FAC266F0A2 /* FBRewardedVideoAd.h */,
-				2A25FD262DBC8F6E6C3439E2DDEDC602 /* Frameworks */,
-			);
-			name = FBAudienceNetwork;
-			path = FBAudienceNetwork;
-			sourceTree = "<group>";
-		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,29 +186,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		DF2FA2CA2135B5B2706FDA3646678A4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA0F2F2CD80FAA9A0C26DD26A5E378 /* FBAudienceNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E9B882E3BD3C2210BB089A7B1A529578 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				201C3CB43120FF73DD9C07E0F9D683B9 /* libPods-NativeAd.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F48CD85364E5BC9ED55EF477F0FFB6A5 /* Leanplum-iOS-Location */ = {
-			isa = PBXGroup;
-			children = (
-				F8FB431B7E6310635D263DE2208361FB /* Frameworks */,
-			);
-			name = "Leanplum-iOS-Location";
-			path = "Leanplum-iOS-Location";
-			sourceTree = "<group>";
-		};
-		F8FB431B7E6310635D263DE2208361FB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				09163DEA9B249BFA23F723CE241908D2 /* LeanplumLocation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -16,9 +16,6 @@
 
 @implementation AppDelegate
 
-DEFINE_VAR_BOOL(showAlternateAdExperience, false)
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     #ifdef DEBUG
         LEANPLUM_USE_ADVERTISING_ID;
