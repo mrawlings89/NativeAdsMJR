@@ -17,7 +17,7 @@
 #define TOP_RIGHT_POSITION @"TopRight"
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
 
-DEFINE_VAR_STRING(sponsoredLabel, @"Partner Content")
+DEFINE_VAR_STRING(sponsoredLabel, @"Sponsored")
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
 
 @implementation ViewController
@@ -62,7 +62,7 @@ DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
     self.adTitleLabel.text = self.nativeAd.title;
     self.adBodyLabel.text = self.nativeAd.body;
     self.adSocialContextLabel.text = self.nativeAd.socialContext;
-    self.sponsoredLabel.text = sponsoredLabel.stringValue;
+    self.sponsoredLabel.text = [sponsoredLabel stringValue];
     
     [self.adCallToActionButton setTitle:self.nativeAd.callToAction
                                forState:UIControlStateNormal];
@@ -84,7 +84,7 @@ DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
     {
         self.adChoicesView.corner = UIRectCornerBottomRight;
     }
-    }];
+        }];
 }
 - (void)nativeAd:(FBNativeAd *)nativeAd didFailWithError:(NSError *)error
 {
