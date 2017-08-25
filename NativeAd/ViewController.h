@@ -27,6 +27,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *adUIView;
 
+
 @end
 
 

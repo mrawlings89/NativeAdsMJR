@@ -16,9 +16,15 @@
 
 #define TOP_RIGHT_POSITION @"TopRight"
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
+#define AD_UIVIEW_BASIC @"basic"
+#define AD_UIVIEW_ALTERNATE @"alternate"
+#define CTA_BUTTON_BLUE @"blue"
+#define CTA_BUTTON_GREEN @"green"
 
 DEFINE_VAR_STRING(sponsoredLabel, @"Sponsored")
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
+DEFINE_VAR_STRING(ctaButtonColor, @"blue")
+DEFINE_VAR_STRING(adUIView, @"basic")
 
 @implementation ViewController
 
@@ -45,12 +51,10 @@ DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
     if (self.nativeAd) {
         [self.nativeAd unregisterView];
     }
-    
     self.nativeAd = nativeAd;
     
     // Create native UI using the ad metadata.
     [self.adCoverMediaView setNativeAd:nativeAd];
-    
     __weak typeof(self) weakSelf = self;
     [self.nativeAd.icon loadImageAsyncWithBlock:^(UIImage *image) {
         __strong typeof(self) strongSelf = weakSelf;
@@ -59,21 +63,38 @@ DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
     self.adStatusLabel.text = @"";
     
     // Render native ads onto UIView
+    //sponsorLabel changes based on LP Variable
+    [Leanplum onVariablesChanged:^() {
     self.adTitleLabel.text = self.nativeAd.title;
     self.adBodyLabel.text = self.nativeAd.body;
     self.adSocialContextLabel.text = self.nativeAd.socialContext;
     self.sponsoredLabel.text = [sponsoredLabel stringValue];
-    
-    [self.adCallToActionButton setTitle:self.nativeAd.callToAction
+    }];
+ 
+     //button color changes based on LP Variable
+    [Leanplum onVariablesChanged:^() {
+    NSString *ctaButtonConfig = [ctaButtonColor stringValue];
+    if([ctaButtonConfig isEqualToString:CTA_BUTTON_BLUE])
+    {
+        [self.adCallToActionButton setTitle:self.nativeAd.callToAction
                                forState:UIControlStateNormal];
-    
+        [self.adCallToActionButton setBackgroundColor:[UIColor blueColor]];
+    }
+    else if([ctaButtonConfig isEqualToString:CTA_BUTTON_GREEN])
+    {
+        [self.adCallToActionButton setTitle:self.nativeAd.callToAction
+                                   forState:UIControlStateNormal];
+        [self.adCallToActionButton setBackgroundColor:[UIColor greenColor]];
+    }
+    }];
     
     // Wire up UIView with the native ad; the whole UIView will be clickable.
     [nativeAd registerViewForInteraction:self.adUIView
                       withViewController:self];
     
     self.adChoicesView.nativeAd = nativeAd;
-    //if stringvalue = right
+   
+    //button placement toggles based on LP Variable
     [Leanplum onVariablesChanged:^() {
     NSString *adPositioning = [adChoicesCorner stringValue];
     if([adPositioning isEqualToString:TOP_RIGHT_POSITION])
@@ -84,8 +105,9 @@ DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
     {
         self.adChoicesView.corner = UIRectCornerBottomRight;
     }
-        }];
+    }];
 }
+
 - (void)nativeAd:(FBNativeAd *)nativeAd didFailWithError:(NSError *)error
 {
     NSLog(@"Native ad failed to load with error: %@", error);
