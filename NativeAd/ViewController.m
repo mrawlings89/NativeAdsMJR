@@ -16,15 +16,13 @@
 
 #define TOP_RIGHT_POSITION @"TopRight"
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
-#define AD_UIVIEW_BASIC @"basic"
-#define AD_UIVIEW_ALTERNATE @"alternate"
 #define CTA_BUTTON_BLUE @"blue"
 #define CTA_BUTTON_GREEN @"green"
+
 
 DEFINE_VAR_STRING(sponsoredLabel, @"Sponsored")
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
 DEFINE_VAR_STRING(ctaButtonColor, @"blue")
-DEFINE_VAR_STRING(adUIView, @"basic")
 
 @implementation ViewController
 
@@ -33,16 +31,15 @@ DEFINE_VAR_STRING(adUIView, @"basic")
     [FBAdSettings setLogLevel:FBAdLogLevelLog];
     [FBAdSettings addTestDevice:@"b602d594afd2b0b327e07a06f36ca6a7e42546d0"];
     
-    // Create a native ad request with a unique placement ID (generate your own on the Facebook app settings).
-    // Use different ID for each ad placement in your app.
+// Create a native ad request with a unique placement ID (generate your own on the Facebook app settings).
+// Use different ID for each ad placement in your app.
     FBNativeAd *nativeAd = [[FBNativeAd alloc] initWithPlacementID:@"150877198827978_150879382161093"];
     
-    // Set a delegate to get notified when the ad was loaded.
+// Set a delegate to get notified when the ad was loaded.
     nativeAd.delegate = self;
     
-    // Configure native ad to wait to call nativeAdDidLoad: until all ad assets are loaded
+// Configure native ad to wait to call nativeAdDidLoad: until all ad assets are loaded
     nativeAd.mediaCachePolicy = FBNativeAdsCachePolicyAll;
-    
     [nativeAd loadAd];
 }
 
@@ -53,8 +50,9 @@ DEFINE_VAR_STRING(adUIView, @"basic")
     }
     self.nativeAd = nativeAd;
     
-    // Create native UI using the ad metadata.
-    [self.adCoverMediaView setNativeAd:nativeAd];
+// Create native UI using the ad metadata.
+   
+    [self.adCoverMediaView setNativeAd:nativeAd];    
     __weak typeof(self) weakSelf = self;
     [self.nativeAd.icon loadImageAsyncWithBlock:^(UIImage *image) {
         __strong typeof(self) strongSelf = weakSelf;
@@ -62,7 +60,8 @@ DEFINE_VAR_STRING(adUIView, @"basic")
     }];
     self.adStatusLabel.text = @"";
     
-    // Render native ads onto UIView
+// Render native ads onto UIView
+    
     //sponsorLabel changes based on LP Variable
     [Leanplum onVariablesChanged:^() {
     self.adTitleLabel.text = self.nativeAd.title;
@@ -85,10 +84,11 @@ DEFINE_VAR_STRING(adUIView, @"basic")
         [self.adCallToActionButton setTitle:self.nativeAd.callToAction
                                    forState:UIControlStateNormal];
         [self.adCallToActionButton setBackgroundColor:[UIColor greenColor]];
+        self.adCallToActionButton.center = CGPointMake(310.0, 60.0);
     }
     }];
     
-    // Wire up UIView with the native ad; the whole UIView will be clickable.
+// Wire up UIView with the native ad; the whole UIView will be clickable.
     [nativeAd registerViewForInteraction:self.adUIView
                       withViewController:self];
     
@@ -107,7 +107,7 @@ DEFINE_VAR_STRING(adUIView, @"basic")
     }
     }];
 }
-
+//Error Catching below
 - (void)nativeAd:(FBNativeAd *)nativeAd didFailWithError:(NSError *)error
 {
     NSLog(@"Native ad failed to load with error: %@", error);
