@@ -22,7 +22,12 @@
 
 DEFINE_VAR_STRING(sponsoredLabel, @"Sponsored")
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
-DEFINE_VAR_STRING(ctaButtonColor, @"blue")
+
+DEFINE_VAR_COLOR(ctaButtonColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1]);
+DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
+                                            @310.0, @"x",
+                                            @60.0, @"y",
+                                            nil);
 
 @implementation ViewController
 
@@ -72,20 +77,27 @@ DEFINE_VAR_STRING(ctaButtonColor, @"blue")
  
      //button color changes based on LP Variable
     [Leanplum onVariablesChanged:^() {
-    NSString *ctaButtonConfig = [ctaButtonColor stringValue];
-    if([ctaButtonConfig isEqualToString:CTA_BUTTON_BLUE])
-    {
-        [self.adCallToActionButton setTitle:self.nativeAd.callToAction
-                               forState:UIControlStateNormal];
-        [self.adCallToActionButton setBackgroundColor:[UIColor blueColor]];
-    }
-    else if([ctaButtonConfig isEqualToString:CTA_BUTTON_GREEN])
-    {
         [self.adCallToActionButton setTitle:self.nativeAd.callToAction
                                    forState:UIControlStateNormal];
-        [self.adCallToActionButton setBackgroundColor:[UIColor greenColor]];
-        self.adCallToActionButton.center = CGPointMake(310.0, 60.0);
-    }
+        [self.adCallToActionButton setBackgroundColor:ctaButtonColor.colorValue];
+        self.adCallToActionButton.center = CGPointMake([[ctaButtonPosition objectForKey:@"x"] floatValue],
+                                                       [[ctaButtonPosition objectForKey:@"y"] floatValue]);
+
+        
+
+//    if([ctaButtonConfig isEqualToString:CTA_BUTTON_BLUE])
+//    {
+//        [self.adCallToActionButton setTitle:self.nativeAd.callToAction
+//                               forState:UIControlStateNormal];
+//        [self.adCallToActionButton setBackgroundColor:[UIColor blueColor]];
+//    }
+//    else if([ctaButtonConfig isEqualToString:CTA_BUTTON_GREEN])
+//    {
+//        [self.adCallToActionButton setTitle:self.nativeAd.callToAction
+//                                   forState:UIControlStateNormal];
+//        [self.adCallToActionButton setBackgroundColor:[UIColor greenColor]];
+//        self.adCallToActionButton.center = CGPointMake(310.0, 60.0);
+//    }
     }];
     
 // Wire up UIView with the native ad; the whole UIView will be clickable.
