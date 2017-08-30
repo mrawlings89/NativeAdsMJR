@@ -17,19 +17,23 @@
 
 #define TOP_RIGHT_POSITION @"TopRight"
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
-
-
-DEFINE_VAR_STRING(sponsoredLabel, @"Sponsored")
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
+
 DEFINE_VAR_STRING(adTitleLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_FLOAT(adTitleLabelFontSize, 15.0)
+DEFINE_VAR_STRING(adBodyLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_FLOAT(adBodyLabelFontSize, 15.0)
+DEFINE_VAR_STRING(adSocialContextLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_FLOAT(adSocialContextLabelFontSize, 15.0)
+DEFINE_VAR_STRING(sponsoredLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_FLOAT(sponsoredLabelFontSize, 15.0)
+DEFINE_VAR_STRING(sponsoredLabelText, @"Sponsored")
 
 DEFINE_VAR_COLOR(ctaButtonColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1]);
 DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
                                             @310.0, @"x",
                                             @60.0, @"y",
                                             nil);
-
-
 
 
 @implementation ViewController
@@ -70,19 +74,25 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
     
 // Render native ads onto UIView
     
-    //sponsorLabel changes based on LP Variable
+    
     [Leanplum onVariablesChanged:^() {
+    //adTitleLabel changes based (font & size) on LP Variable
     self.adTitleLabel.text = self.nativeAd.title;
-    self.adTitleLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:15];
+    self.adTitleLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
    
+    //adBodyLabel changes based (font & size) on LP Variable
     self.adBodyLabel.text = self.nativeAd.body;
-    
+     self.adBodyLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
+    //adSocialContextLabel changes based (font & size) on LP Variable
     self.adSocialContextLabel.text = self.nativeAd.socialContext;
-    
-    self.sponsoredLabel.text = [sponsoredLabel stringValue];
+    self.adSocialContextLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
+    //sponsorLabel changes (font, size, & text)  based on LP Variable
+    self.sponsoredLabel.text = [sponsoredLabelText stringValue];
     }];
- 
-     //button color changes based on LP Variable
+    self.sponsoredLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
+    
+    
+    //ctaButton color changes based on LP Variable
     [Leanplum onVariablesChanged:^() {
         [self.adCallToActionButton setTitle:self.nativeAd.callToAction
                                    forState:UIControlStateNormal];
