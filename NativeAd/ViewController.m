@@ -18,6 +18,7 @@
 #define TOP_RIGHT_POSITION @"TopRight"
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
+DEFINE_VAR_COLOR(adViewBackgroundColor, [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0]);
 
 DEFINE_VAR_STRING(adTitleLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adTitleLabelFontSize, 15.0)
@@ -86,7 +87,8 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
 // Render native ads onto UIView
     
     [Leanplum onVariablesChanged:^() {
-    //adTitleLabel changes based (font, size, text color, & background color) on LP Variable
+        
+        //adTitleLabel changes based (font, size, text color, & background color) on LP Variable
         self.adTitleLabel.text = self.nativeAd.title;
         self.adTitleLabel.textColor =  [adTitleLabelTextColor colorValue];
         self.adTitleLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
@@ -123,6 +125,9 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
 // Wire up UIView with the native ad; the whole UIView will be clickable.
     [nativeAd registerViewForInteraction:self.adUIView
                       withViewController:self];
+    
+    //adUIView background color changes based on LP Variable
+    _adUIView.backgroundColor = [adViewBackgroundColor colorValue];
     self.adChoicesView.nativeAd = nativeAd;
    
     //adChoicesLabel placement toggles based on LP Variable
@@ -137,6 +142,8 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
         self.adChoicesView.corner = UIRectCornerBottomRight;
     }
     }];
+    
+   
 }
 
 //Error Catching below
