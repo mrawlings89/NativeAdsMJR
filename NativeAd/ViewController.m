@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Leanplum/Leanplum.h>
+
 @import FBAudienceNetwork;
 
 @interface ViewController ()
@@ -16,18 +17,20 @@
 
 #define TOP_RIGHT_POSITION @"TopRight"
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
-#define CTA_BUTTON_BLUE @"blue"
-#define CTA_BUTTON_GREEN @"green"
 
 
 DEFINE_VAR_STRING(sponsoredLabel, @"Sponsored")
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
+DEFINE_VAR_STRING(adTitleLabelFont, @"AmericanTypewriter")
 
 DEFINE_VAR_COLOR(ctaButtonColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1]);
 DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
                                             @310.0, @"x",
                                             @60.0, @"y",
                                             nil);
+
+
+
 
 @implementation ViewController
 
@@ -70,8 +73,12 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
     //sponsorLabel changes based on LP Variable
     [Leanplum onVariablesChanged:^() {
     self.adTitleLabel.text = self.nativeAd.title;
+    self.adTitleLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:15];
+   
     self.adBodyLabel.text = self.nativeAd.body;
+    
     self.adSocialContextLabel.text = self.nativeAd.socialContext;
+    
     self.sponsoredLabel.text = [sponsoredLabel stringValue];
     }];
  
@@ -82,31 +89,14 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
         [self.adCallToActionButton setBackgroundColor:ctaButtonColor.colorValue];
         self.adCallToActionButton.center = CGPointMake([[ctaButtonPosition objectForKey:@"x"] floatValue],
                                                        [[ctaButtonPosition objectForKey:@"y"] floatValue]);
-
-        
-
-//    if([ctaButtonConfig isEqualToString:CTA_BUTTON_BLUE])
-//    {
-//        [self.adCallToActionButton setTitle:self.nativeAd.callToAction
-//                               forState:UIControlStateNormal];
-//        [self.adCallToActionButton setBackgroundColor:[UIColor blueColor]];
-//    }
-//    else if([ctaButtonConfig isEqualToString:CTA_BUTTON_GREEN])
-//    {
-//        [self.adCallToActionButton setTitle:self.nativeAd.callToAction
-//                                   forState:UIControlStateNormal];
-//        [self.adCallToActionButton setBackgroundColor:[UIColor greenColor]];
-//        self.adCallToActionButton.center = CGPointMake(310.0, 60.0);
-//    }
     }];
     
 // Wire up UIView with the native ad; the whole UIView will be clickable.
     [nativeAd registerViewForInteraction:self.adUIView
                       withViewController:self];
-    
     self.adChoicesView.nativeAd = nativeAd;
    
-    //button placement toggles based on LP Variable
+    //adChoicesLabel placement toggles based on LP Variable
     [Leanplum onVariablesChanged:^() {
     NSString *adPositioning = [adChoicesCorner stringValue];
     if([adPositioning isEqualToString:TOP_RIGHT_POSITION])
@@ -119,6 +109,7 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
     }
     }];
 }
+
 //Error Catching below
 - (void)nativeAd:(FBNativeAd *)nativeAd didFailWithError:(NSError *)error
 {
