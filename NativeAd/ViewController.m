@@ -29,10 +29,14 @@ DEFINE_VAR_STRING(sponsoredLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(sponsoredLabelFontSize, 15.0)
 DEFINE_VAR_STRING(sponsoredLabelText, @"Sponsored")
 
-DEFINE_VAR_COLOR(adTitleLabelColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
-DEFINE_VAR_COLOR(adBodyLabelColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
-DEFINE_VAR_COLOR(adSocialContextLabelColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
-DEFINE_VAR_COLOR(sponsoredLabelColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adTitleLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adTitleLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
+DEFINE_VAR_COLOR(adBodyLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adBodyLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
+DEFINE_VAR_COLOR(adSocialContextLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adSocialContextLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
+DEFINE_VAR_COLOR(sponsoredLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(sponsoredLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
 
 DEFINE_VAR_COLOR(ctaButtonColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1]);
 DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
@@ -80,26 +84,31 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
 // Render native ads onto UIView
     
     [Leanplum onVariablesChanged:^() {
-    //adTitleLabel changes based (font, size, & label color) on LP Variable
+    //adTitleLabel changes based (font, size, text color, & background color) on LP Variable
         self.adTitleLabel.text = self.nativeAd.title;
+        self.adTitleLabel.textColor =  [adTitleLabelTextColor colorValue];
         self.adTitleLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
-        self.adTitleLabel.backgroundColor = [adTitleLabelColor colorValue];
+        self.adTitleLabel.backgroundColor = [adTitleLabelBackgroundColor colorValue];
             
-        //adBodyLabel changes based (font, size, & label color)on LP Variable
+        //adBodyLabel changes based (font, size, text color, & background  color) on LP Variable
         self.adBodyLabel.text = self.nativeAd.body;
+        self.adBodyLabel.textColor =  [adBodyLabelTextColor colorValue];
         self.adBodyLabel.font = [UIFont fontWithName:[adBodyLabelFont stringValue] size:[adBodyLabelFontSize floatValue]];
-        self.adBodyLabel.backgroundColor = [adBodyLabelColor colorValue];
+        self.adBodyLabel.backgroundColor = [adBodyLabelBackgroundColor colorValue];
             
-        //adSocialContextLabel changes based (font, size, & label color) on LP Variable
+        //adSocialContextLabel changes based (font, size, text color, & background color) on LP Variable
         self.adSocialContextLabel.text = self.nativeAd.socialContext;
+        self.adSocialContextLabel.textColor =  [adSocialContextLabelTextColor colorValue];
         self.adSocialContextLabel.font = [UIFont fontWithName:[adSocialContextLabelFont stringValue] size:[adSocialContextLabelFontSize floatValue]];
-        self.adSocialContextLabel.backgroundColor = [adSocialContextLabelColor colorValue];
+        self.adSocialContextLabel.backgroundColor = [adSocialContextLabelBackgroundColor colorValue];
             
-        //sponsorLabel changes (font, size, label color & text)  based on LP Variable
+        //sponsorLabel changes (font, size, text color, text value, & background)  based on LP Variable
         self.sponsoredLabel.text = [sponsoredLabelText stringValue];
+        self.sponsoredLabel.textColor =  [sponsoredLabelTextColor colorValue];
         self.sponsoredLabel.font = [UIFont fontWithName:[sponsoredLabelFont stringValue] size:[sponsoredLabelFontSize floatValue]];
-        self.sponsoredLabel.backgroundColor = [sponsoredLabelColor colorValue];
+        self.sponsoredLabel.backgroundColor = [sponsoredLabelBackgroundColor colorValue];
     }];
+    
     //ctaButton color changes based on LP Variable
     [Leanplum onVariablesChanged:^() {
         [self.adCallToActionButton setTitle:self.nativeAd.callToAction
