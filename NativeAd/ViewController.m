@@ -21,27 +21,29 @@ DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
 
 DEFINE_VAR_STRING(adTitleLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adTitleLabelFontSize, 15.0)
+DEFINE_VAR_COLOR(adTitleLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adTitleLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
+
 DEFINE_VAR_STRING(adBodyLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adBodyLabelFontSize, 15.0)
+DEFINE_VAR_COLOR(adBodyLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adBodyLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
+
 DEFINE_VAR_STRING(adSocialContextLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adSocialContextLabelFontSize, 15.0)
+DEFINE_VAR_COLOR(adSocialContextLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adSocialContextLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
+
 DEFINE_VAR_STRING(sponsoredLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(sponsoredLabelFontSize, 15.0)
 DEFINE_VAR_STRING(sponsoredLabelText, @"Sponsored")
-
-DEFINE_VAR_COLOR(adTitleLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
-DEFINE_VAR_COLOR(adTitleLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
-DEFINE_VAR_COLOR(adBodyLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
-DEFINE_VAR_COLOR(adBodyLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
-DEFINE_VAR_COLOR(adSocialContextLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
-DEFINE_VAR_COLOR(adSocialContextLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
 DEFINE_VAR_COLOR(sponsoredLabelBackgroundColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0]);
 DEFINE_VAR_COLOR(sponsoredLabelTextColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]);
 
 DEFINE_VAR_COLOR(ctaButtonColor, [UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1]);
 DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
                                             @310.0, @"x",
-                                            @60.0, @"y",
+                                            @275.0, @"y",
                                             nil);
 
 
