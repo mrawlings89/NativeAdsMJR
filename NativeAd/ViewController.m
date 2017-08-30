@@ -18,7 +18,7 @@
 #define TOP_RIGHT_POSITION @"TopRight"
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
-DEFINE_VAR_COLOR(adViewBackgroundColor, [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0]);
+DEFINE_VAR_COLOR(adViewBackgroundColor, [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]);
 
 DEFINE_VAR_STRING(adTitleLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adTitleLabelFontSize, 15.0)
@@ -123,24 +123,25 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
     }];
     
 // Wire up UIView with the native ad; the whole UIView will be clickable.
-    [nativeAd registerViewForInteraction:self.adUIView
+    [Leanplum onVariablesChanged:^() {
+        [nativeAd registerViewForInteraction:self.adUIView
                       withViewController:self];
     
     //adUIView background color changes based on LP Variable
-    _adUIView.backgroundColor = [adViewBackgroundColor colorValue];
-    self.adChoicesView.nativeAd = nativeAd;
+        _adUIView.backgroundColor = [adViewBackgroundColor colorValue];
+        self.adChoicesView.nativeAd = nativeAd;
    
     //adChoicesLabel placement toggles based on LP Variable
-    [Leanplum onVariablesChanged:^() {
-    NSString *adPositioning = [adChoicesCorner stringValue];
-    if([adPositioning isEqualToString:TOP_RIGHT_POSITION])
-    {
-        self.adChoicesView.corner = UIRectCornerTopRight;
-    }
-    else if([adPositioning isEqualToString:BOTTOM_RIGHT_POSITION])
-    {
-        self.adChoicesView.corner = UIRectCornerBottomRight;
-    }
+    
+        NSString *adPositioning = [adChoicesCorner stringValue];
+        if([adPositioning isEqualToString:TOP_RIGHT_POSITION])
+        {
+            self.adChoicesView.corner = UIRectCornerTopRight;
+        }
+        else if([adPositioning isEqualToString:BOTTOM_RIGHT_POSITION])
+        {
+            self.adChoicesView.corner = UIRectCornerBottomRight;
+        }
     }];
     
    
