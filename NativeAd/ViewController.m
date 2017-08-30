@@ -19,13 +19,13 @@
 #define BOTTOM_RIGHT_POSITION @"BottomRight"
 DEFINE_VAR_STRING(adChoicesCorner, @"TopRight")
 
-DEFINE_VAR_STRING(adTitleLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_STRING(adTitleLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adTitleLabelFontSize, 15.0)
-DEFINE_VAR_STRING(adBodyLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_STRING(adBodyLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adBodyLabelFontSize, 15.0)
-DEFINE_VAR_STRING(adSocialContextLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_STRING(adSocialContextLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(adSocialContextLabelFontSize, 15.0)
-DEFINE_VAR_STRING(sponsoredLabelFont, @"AmericanTypewriter")
+DEFINE_VAR_STRING(sponsoredLabelFont, @"Arial")
 DEFINE_VAR_FLOAT(sponsoredLabelFontSize, 15.0)
 DEFINE_VAR_STRING(sponsoredLabelText, @"Sponsored")
 
@@ -87,17 +87,17 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(ctaButtonPosition,
             
         //adBodyLabel changes based (font, size, & label color)on LP Variable
         self.adBodyLabel.text = self.nativeAd.body;
-        self.adBodyLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
+        self.adBodyLabel.font = [UIFont fontWithName:[adBodyLabelFont stringValue] size:[adBodyLabelFontSize floatValue]];
         self.adBodyLabel.backgroundColor = [adBodyLabelColor colorValue];
             
         //adSocialContextLabel changes based (font, size, & label color) on LP Variable
         self.adSocialContextLabel.text = self.nativeAd.socialContext;
-        self.adSocialContextLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
+        self.adSocialContextLabel.font = [UIFont fontWithName:[adSocialContextLabelFont stringValue] size:[adSocialContextLabelFontSize floatValue]];
         self.adSocialContextLabel.backgroundColor = [adSocialContextLabelColor colorValue];
             
         //sponsorLabel changes (font, size, label color & text)  based on LP Variable
         self.sponsoredLabel.text = [sponsoredLabelText stringValue];
-        self.sponsoredLabel.font = [UIFont fontWithName:[adTitleLabelFont stringValue] size:[adTitleLabelFontSize floatValue]];
+        self.sponsoredLabel.font = [UIFont fontWithName:[sponsoredLabelFont stringValue] size:[sponsoredLabelFontSize floatValue]];
         self.sponsoredLabel.backgroundColor = [sponsoredLabelColor colorValue];
     }];
     //ctaButton color changes based on LP Variable
